@@ -1,100 +1,89 @@
-import Image from "next/image";
+'use client';
+
+import Image from 'next/image';
+import { FaCode, FaDatabase, FaChartLine, FaEnvelope, FaPhone, FaMapMarkerAlt } from 'react-icons/fa';
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              app/page.js
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+    <div className="min-h-screen bg-gradient-to-r from-blue-500 to-purple-600 text-white font-sans">
+      {/* About Section */}
+      <section className="p-6 text-center" id="about">
+        <Image src="/picture.jpg" alt="Raya Rizkyana" width={150} height={150} className="mx-auto rounded-full border-4 border-white" />
+        <h1 className="text-4xl font-bold mt-4">Raya Rizkyana</h1>
+        <p className="text-lg mt-2">Database Administrator | Programmer</p>
+      </section>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+      {/* Skills Section */}
+      <section className="p-6" id="skills">
+        <h2 className="text-3xl font-bold mb-4">Skills</h2>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+          <div className="bg-white text-black p-4 rounded-lg shadow-md text-center">
+            <FaDatabase className="text-4xl mx-auto text-yellow-500" />
+            <h3 className="text-xl font-semibold mt-2">Database Administration</h3>
+            <p className="mt-2">MySQL, PostgreSQL, MongoDB</p>
+          </div>
+          <div className="bg-white text-black p-4 rounded-lg shadow-md text-center">
+            <FaCode className="text-4xl mx-auto text-green-500" />
+            <h3 className="text-xl font-semibold mt-2">Programming</h3>
+            <p className="mt-2">JavaScript, Python, PHP</p>
+          </div>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
+      </section>
+
+      {/* Services Section */}
+      <section className="p-6" id="services">
+        <h2 className="text-3xl font-bold mb-4">Services</h2>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+          <div className="bg-white text-black p-4 rounded-lg shadow-md">
+            <FaDatabase className="text-4xl text-yellow-500" />
+            <h3 className="text-xl font-semibold mt-2">Database Management</h3>
+            <p className="mt-2">Mengelola dan mengoptimalkan database untuk performa maksimal.</p>
+          </div>
+          <div className="bg-white text-black p-4 rounded-lg shadow-md">
+            <FaCode className="text-4xl text-green-500" />
+            <h3 className="text-xl font-semibold mt-2">Software Development</h3>
+            <p className="mt-2">Membangun aplikasi web dan software berbasis kebutuhan Anda.</p>
+          </div>
+        </div>
+      </section>
+
+      {/* Portfolios Section */}
+      <section className="p-6" id="portfolios">
+        <h2 className="text-3xl font-bold mb-4">Portfolios</h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div className="bg-white text-black p-4 rounded-lg shadow-md">
+            <h3 className="text-xl font-semibold">Website Inventaris Obat RSUD Cicalengka</h3>
+            <p className="mt-2">Sistem pengelolaan obat dengan fitur lengkap untuk pencatatan obat masuk dan keluar.</p>
+          </div>
+          <div className="bg-white text-black p-4 rounded-lg shadow-md">
+            <h3 className="text-xl font-semibold">Dashboard Analisis Penjualan</h3>
+            <p className="mt-2">Dashboard interaktif untuk memantau kinerja penjualan dengan visualisasi data yang menarik.</p>
+          </div>
+        </div>
+      </section>
+
+      {/* Contact Section */}
+      <section className="p-6" id="contact">
+        <h2 className="text-3xl font-bold mb-4">Contact</h2>
+        <div className="space-y-2">
+          <div className="flex items-center">
+            <FaEnvelope className="mr-2 text-xl" />
+            <span>raya@example.com</span>
+          </div>
+          <div className="flex items-center">
+            <FaPhone className="mr-2 text-xl" />
+            <span>+62 812 3456 7890</span>
+          </div>
+          <div className="flex items-center">
+            <FaMapMarkerAlt className="mr-2 text-xl" />
+            <span>Bandung, Indonesia</span>
+          </div>
+        </div>
+      </section>
+
+      {/* Footer */}
+      <footer className="text-center p-4 bg-black/20">
+        &copy; 2024 Raya Rizkyana. All Rights Reserved.
       </footer>
     </div>
   );
